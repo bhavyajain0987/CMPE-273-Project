@@ -18,7 +18,7 @@ credentials = Credentials(
                    api_key = "sI3Slr64zePjavQrnGPwaLcFIqnPwafbqLwgKRqPv9Y2" # Replace with your API key
                   )
 client = APIClient(credentials)
-project_id = "skills-network"
+project_id = "c264db47-aa27-4a04-a6ac-79e9d5d56992"
 
 
 class ExtractIngredientsTool():

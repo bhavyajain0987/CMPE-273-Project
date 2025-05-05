@@ -6,8 +6,7 @@ from dotenv import load_dotenv
 from src.tasks import process_nutri_task
 from redis import Redis
 from rq import Queue
-import multiprocessing
-multiprocessing.set_start_method("spawn", force=True)
+
 
 # Setup Redis connection and RQ queue
 redis_conn = Redis()
@@ -115,7 +114,7 @@ def analyze_food(image, dietary_restrictions, workflow_type, progress=gr.Progres
     """
     
     # Save the uploaded image
-    image_path = "uploaded_image.jpg"
+    image_path = "./uploaded_image.jpg"
     image.save(image_path)
 
     # Enqueue the task to RQ queue
